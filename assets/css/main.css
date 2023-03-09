@@ -107,6 +107,85 @@ body {
   background: #F07867;
   color: #fff;
 }
+.header-main {
+  display: flex;
+  width: 100%;
+}
+.header-main-left {
+  padding: 150px 0;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.header-main-left h1 {
+  font-size: 72px;
+  font-weight: 400;
+  color: #333;
+}
+.header-main-left p {
+  font-weight: 400;
+  font-size: 20px;
+  color: #333;
+}
+.header-main-left-buttons {
+  display: flex;
+  gap: 30px;
+}
+.header-main-left-buttons a {
+  padding: 12px 33px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  background: #F07867;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.header-main-left-buttons a:active {
+  transform: scale(0.95);
+}
+.header-main-left-buttons a:first-child:hover {
+  border: 1px solid rgba(240, 120, 103, 0.295828);
+  color: rgba(51, 51, 51, 0.503623);
+  background: inherit;
+}
+.header-main-left-buttons a:last-child {
+  background: inherit;
+  border: 1px solid rgba(240, 120, 103, 0.295828);
+  color: rgba(51, 51, 51, 0.503623);
+  border: 1px solid rgba(240, 120, 103, 0.295828);
+  color: rgba(51, 51, 51, 0.503623);
+  transition: all 0.2s;
+}
+.header-main-left-buttons a:last-child:hover {
+  color: #fff;
+  background: #F07867;
+}
+.header-main-right {
+  padding: 100px 0;
+  width: 50%;
+  position: relative;
+}
+.header-main-right img:nth-child(1) {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  z-index: 2;
+}
+.header-main-right img:nth-child(2) {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  z-index: 1;
+  width: 350px;
+  height: 350px;
+}
+.header-main-right img:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
 
 @media (max-width: 768px) {
   .header-nav-links {
@@ -131,6 +210,7 @@ body {
     background: #FDF0E9;
     color: #fff;
     display: flex;
+    z-index: 99999;
   }
   .header-nav-menus a {
     width: auto 0;
