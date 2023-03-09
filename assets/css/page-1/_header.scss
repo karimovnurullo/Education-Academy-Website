@@ -1,0 +1,107 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    background: #FDF0E9;
+
+    &-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 0;
+
+        &-menus {
+            display: flex;
+            gap: 50px;
+
+            a {
+                font-size: 16px;
+                color: #333;
+                transition: all 0.2s;
+
+                &:hover {
+                    color: #F07867;
+                }
+            }
+        }
+
+        &-links {
+            display: flex;
+            gap: 8px;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 48px;
+                height: 48px;
+                font-size: 20px;
+                border: 1px solid rgba(240, 120, 103, 0.295828);
+                border-radius: 50%;
+                color: #98918E;
+                transition: all 0.2s;
+
+                &:hover {
+                    background: #F07867;
+                    color: #fff;
+                }
+            }
+        }
+
+        &-menu {
+            width: 48px;
+            height: 48px;
+            font-size: 20px;
+            border: 1px solid rgba(240, 120, 103, 0.295828);
+            border-radius: 50%;
+            color: #98918E;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            display: none;
+
+            &:active {
+                transform: scale(0.95);
+                background: #F07867;
+                color: #fff;
+            }
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .header {
+        &-nav {
+            &-links {
+                display: none;
+            }
+
+            &-menu {
+                display: flex;
+            }
+
+        }
+    }
+}
+
+@media(max-width: 600px) {
+    .header {
+        &-nav {
+            padding: 16px 0;
+            &-menus {
+                display: none;
+            }
+        }
+    }
+}
+
+@media(max-width: 400px) {
+    .header {
+        &-nav {
+            &-menus {
+                display: none;
+            }
+        }
+    }
+}

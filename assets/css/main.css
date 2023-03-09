@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.section {
+  padding: 0 135px;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .section {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 600px) {
+  .section {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 400px) {
+  .section {
+    padding: 0 16px;
+  }
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  background: #FDF0E9;
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+}
+.header-nav-menus {
+  display: flex;
+  gap: 50px;
+}
+.header-nav-menus a {
+  font-size: 16px;
+  color: #333;
+  transition: all 0.2s;
+}
+.header-nav-menus a:hover {
+  color: #F07867;
+}
+.header-nav-links {
+  display: flex;
+  gap: 8px;
+}
+.header-nav-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  border: 1px solid rgba(240, 120, 103, 0.295828);
+  border-radius: 50%;
+  color: #98918E;
+  transition: all 0.2s;
+}
+.header-nav-links a:hover {
+  background: #F07867;
+  color: #fff;
+}
+.header-nav-menu {
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  border: 1px solid rgba(240, 120, 103, 0.295828);
+  border-radius: 50%;
+  color: #98918E;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  display: none;
+}
+.header-nav-menu:active {
+  transform: scale(0.95);
+  background: #F07867;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .header-nav-links {
+    display: none;
+  }
+  .header-nav-menu {
+    display: flex;
+  }
+}
+@media (max-width: 600px) {
+  .header-nav {
+    padding: 16px 0;
+  }
+  .header-nav-menus {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .header-nav-menus {
+    display: none;
+  }
+}/*# sourceMappingURL=main.css.map */
