@@ -51,6 +51,11 @@ body {
   align-items: center;
   padding: 25px 0;
 }
+.header-nav-logo {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
 .header-nav-menus {
   display: flex;
   gap: 50px;
