@@ -47,7 +47,8 @@
             }
         }
 
-        &-menu {
+        &-menu,
+        &-close {
             width: 48px;
             height: 48px;
             font-size: 20px;
@@ -76,11 +77,6 @@
             &-links {
                 display: none;
             }
-
-            &-menu {
-                display: flex;
-            }
-
         }
     }
 }
@@ -89,19 +85,75 @@
     .header {
         &-nav {
             padding: 16px 0;
+
             &-menus {
-                display: none;
+                padding: 20px 20px;
+                position: fixed;
+                left: 0;
+                top: -100%;
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background: #FDF0E9;
+                color: #fff;
+                display: flex;
+
+                a {
+                    width: auto 0;
+                    color: #333;
+                    font-size: 20px;
+                }
+            }
+
+            // .header-nav-menus.active {
+            //     display: flex;
+            // }
+            .header-nav-menus.open{
+                animation: open 0.8s;
+                top: 0;
+            }
+            @keyframes open {
+                0% {
+                    top: -100%;
+                }
+                100% {
+                    top: 0;
+                }
+            }
+            .header-nav-menus.close{
+                animation: closed 0.8s;
+                top: -100%;
+            }
+            @keyframes closed {
+                0% {
+                    top: 0;
+                }
+                100% {
+                    top: -100%;
+                }
+            }
+
+            &-menu {
+                display: flex;
+            }
+
+            &-close {
+                font-size: 25px;
+                color: #333;
+                display: flex;
+                font-weight: bold;
             }
         }
     }
 }
 
-@media(max-width: 400px) {
-    .header {
-        &-nav {
-            &-menus {
-                display: none;
-            }
-        }
-    }
-}
+// @media(max-width: 400px) {
+//     .header {
+//         &-nav {
+
+//         }
+//     }
+// }
